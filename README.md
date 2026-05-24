@@ -1,6 +1,6 @@
 # Async Jobs API
 
-REST API для запуска, просмотра и отмены фоновых задач. Проект подготовлен как стартовая структура лабораторной работы.
+REST API для запуска, просмотра и отмены фоновых задач. Хранение in-memory, выполнение через worker pool.
 
 ## Запуск
 
@@ -10,7 +10,7 @@ go run ./cmd/server
 
 Сервис слушает `:8080`.
 
-## Основные требования
+## Реализовано
 
 - in-memory очередь задач;
 - worker pool на goroutine;
@@ -19,3 +19,9 @@ go run ./cmd/server
 - graceful shutdown с запретом новых задач;
 - middleware: structured logging, request id, recoverer, timeout, shutdown guard, metrics;
 - `/api/v1/metrics` в JSON-формате.
+
+## Проверка
+
+```bash
+go test ./...
+```

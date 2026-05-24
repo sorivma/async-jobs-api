@@ -11,3 +11,15 @@ Content-Type: application/json
     "duration_seconds": 10
   }
 }
+
+### Jobs
+GET http://localhost:8080/api/v1/jobs
+
+### Get job
+GET http://localhost:8080/api/v1/jobs/job-1
+
+### Cancel job
+POST http://localhost:8080/api/v1/jobs/job-1/cancel
+
+### Delete completed job
+DELETE http://localhost:8080/api/v1/jobs/job-1
